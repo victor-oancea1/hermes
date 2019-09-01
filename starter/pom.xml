@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.victor.oancea</groupId>
+        <artifactId>hermes</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.victor.oancea</groupId>
+    <artifactId>hermes-starter</artifactId>
+
+    <name>Hermes-Starter</name>
+    <description>Hermes Starter layer</description>
+
+    <properties>
+        <start-class>com.victor.oancea.hermes.starter.HermesApplicationKt</start-class>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.victor.oancea</groupId>
+            <artifactId>hermes-message</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.victor.oancea</groupId>
+            <artifactId>hermes-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.victor.oancea</groupId>
+            <artifactId>hermes-core</artifactId>
+        </dependency>
+    </dependencies>
+    <build>
+        <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
+        <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>${start-class}</mainClass>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>

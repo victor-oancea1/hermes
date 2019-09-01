@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>com.victor.oancea</groupId>
+        <artifactId>hermes</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.victor.oancea</groupId>
+    <artifactId>hermes-application</artifactId>
+
+    <properties>
+        <java-uuid-generator.version>3.2.0</java-uuid-generator.version>
+    </properties>
+
+    <name>Hermes-Application</name>
+    <description>Hermes application layer</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.victor.oancea</groupId>
+            <artifactId>hermes-domain</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.uuid</groupId>
+            <artifactId>java-uuid-generator</artifactId>
+            <version>${java-uuid-generator.version}</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <sourceDirectory>${project.basedir}/src/main/kotlin</sourceDirectory>
+        <testSourceDirectory>${project.basedir}/src/test/kotlin</testSourceDirectory>
+    </build>
+</project>
