@@ -17,6 +17,7 @@
 
     <properties>
         <reactor-kafka.version>1.1.0.RELEASE</reactor-kafka.version>
+        <reactor-test.version>3.2.12.RELEASE</reactor-test.version>
     </properties>
 
     <dependencies>
@@ -28,6 +29,12 @@
         <dependency>
             <groupId>com.victor.oancea</groupId>
             <artifactId>hermes-application</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.projectreactor</groupId>
+            <artifactId>reactor-test</artifactId>
+            <version>${reactor-test.version}</version>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 
